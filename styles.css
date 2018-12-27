@@ -14,7 +14,6 @@ height: 175px;
 .header{
   border: 1.25px solid black;
 }
-
 td{
   border: 0.5px solid black;
   font-size: 15px;
@@ -31,4 +30,8 @@ input[type=button] {
 input[type=text]{
   height: 85%;
   width: 85%;
+}
+/*single things*/
+value{
+  padding: 2px;
 }
