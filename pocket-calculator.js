@@ -3,6 +3,11 @@ function dis(val)  {
        document.getElementById("result").value+=val
 }
 
+function dot(val){
+//placeholder keeps the zero after the decimal point
+
+document.getElementById("result").value+=val+=val.placeholder;
+}
 function clr() {
     document.getElementById("result").value =" "
   }
@@ -23,6 +28,4 @@ if (y > 999){
 if (y > 999999999){
     document.getElementById("result").value = y.toExponential();
 }
-
 }
-//https://stackoverflow.com/questions/3753483/javascript-thousand-separator-string-format/19840881
