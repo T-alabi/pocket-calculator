@@ -11,7 +11,12 @@ function solve() {
   let x = document.getElementById("result").value
   let y = eval(x);
  document.getElementById("result").value = y
+/*error message*/
  if (isNaN(y) ) {
   document.getElementById("result").value = "Error";
-}//still doesnt work
+}
+/*scientific notation */
+if (y > 999999999){
+    document.getElementById("result").value = y.toExponential();
+}
 }
