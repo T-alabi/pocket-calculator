@@ -5,8 +5,9 @@ function dis(val)  {
 
 function dot(val){
 //placeholder keeps the zero after the decimal point
+let placeholder = 0;
+document.getElementById("result").value+=val+=val.placeholder="0";
 
-document.getElementById("result").value+=val+=val.placeholder;
 }
 function clr() {
     document.getElementById("result").value =" "
