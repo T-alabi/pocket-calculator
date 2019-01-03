@@ -15,8 +15,14 @@ function solve() {
  if (isNaN(y) ) {
   document.getElementById("result").value = "Error";
 }
+/*thousands place commas*/
+if (y > 999){
+  document.getElementById("result").value = y.toLocaleString();
+}
 /*scientific notation */
 if (y > 999999999){
     document.getElementById("result").value = y.toExponential();
 }
+
 }
+//https://stackoverflow.com/questions/3753483/javascript-thousand-separator-string-format/19840881
