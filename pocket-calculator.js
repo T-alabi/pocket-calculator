@@ -10,8 +10,9 @@ function clr() {
 function solve() {
   let x = document.getElementById("result").value
   let y = eval(x);
+// (not working)  y = y.toLocateString()
  document.getElementById("result").value = y
  if (isNaN(y) ) {
   document.getElementById("result").value = "Error";
-}//still doesnt work
+}
 }
