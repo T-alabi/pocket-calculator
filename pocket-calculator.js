@@ -1,12 +1,12 @@
 function dot(val){
 //placeholder keeps the zero after the decimal point
 //do later (decimal point)
-document.getElementById("result").innherHTML+=val+="0";
-if (dis(val)){
-  document.getElementById("result").innerHTML-=val+val
-}
-}
+document.getElementById("result").value+=val+0;
 
+if (dis(val)){
+  document.getElementById("result").value=-val
+}
+}
 function dis(val)  {
        document.getElementById("result").value+=val
 }
