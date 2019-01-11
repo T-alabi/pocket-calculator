@@ -2,14 +2,14 @@
 .table{
 border-collapse: collapse;
 border: 1px solid black;
-padding: 20px;
+padding-top: 100px;
 align: center;
 height: 175px;
   text-align: center;
   margin:auto;
   width: 33.33%;
-  padding: 5px;
     width: 350px;
+
 }
 td{
   border: 0.5px solid black;
@@ -22,14 +22,16 @@ th{
 }
 input[type=button] {
     width: 100%;
-    height: 95%;
+    height: 90%;
+    color: white;
+
 }
 input[type=text]{
   height: 85%;
   width: 85%;
+  color: white;
 }
 
-#result{
-  font-weight: bold;
-  color: black;
+input{
+  background-color: #716e82;
 }

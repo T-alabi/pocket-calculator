@@ -3,9 +3,6 @@ function dot(val){
 //do later (decimal point)
 document.getElementById("result").value+=val+0;
 
-if (dis(val)){
-  document.getElementById("result").value=-val
-}
 }
 function dis(val)  {
        document.getElementById("result").value+=val
