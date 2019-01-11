@@ -7,24 +7,31 @@ align: center;
 height: 175px;
   text-align: center;
   margin:auto;
-  width: 33.33%;
-    width: 350px;
+  height: 500px;
+    width: 400px;
+    background-color: #64798c;
 
+}
+input[type=placeholder] {
+color: white; /*doesnt work!!!!*/
 }
 td{
   border: 0.5px solid black;
-  font-size: 15px;
+
   height: 50px;
 }
 th{
-  text-align: right;
+  align: center;
     height: 55px;
+    font-size: 5px;
+    font-weight: bold;
 }
 input[type=button] {
     width: 100%;
     height: 90%;
     color: white;
-
+    border: none;
+    align: center;
 }
 input[type=text]{
   height: 85%;
@@ -34,4 +41,8 @@ input[type=text]{
 
 input{
   background-color: #716e82;
+  font-size: 18px;
+    font-weight: bold;
+    placeholder-color: white;
+    placeholder: white;
 }
