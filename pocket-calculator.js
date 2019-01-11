@@ -3,12 +3,12 @@ function dis(val)  {
        document.getElementById("result").value+=val
 }
 
-function dot(val){
-//placeholder keeps the zero after the decimal point
-let placeholder = 0;
-document.getElementById("result").value+=val+=val.placeholder="0";
+function dot(val) {
+//placeholder keeps the zero after the decimal point DEAL WIT IT LATER
+document.getElementById("result").innerHTML;
 
 }
+
 function clr() {
     document.getElementById("result").value =" "
   }
