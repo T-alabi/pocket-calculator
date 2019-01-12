@@ -11,7 +11,7 @@ function dis(val)  {
 function dot(val) {
 //placeholder keeps the zero after the decimal point DEAL WIT IT LATER
 document.getElementById("result").value+=val
-
+}
 
 /*for 5+-2 test case and +/- button*/
 function makeCurrentValueNegative() {
@@ -74,5 +74,4 @@ Enter 8 + / 4, and your calculator should display 2.
 (doesnt evaluate for all 4)
 Enter 7 and then press AC, and your calculator should display 0(input screen blank)
 Enter 9 and then +/-, and your calculator should display -9(shows9)
-
 */
