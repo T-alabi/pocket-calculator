@@ -12,6 +12,17 @@ function dot(val) {
 //placeholder keeps the zero after the decimal point DEAL WIT IT LATER
 document.getElementById("result").value+=val
 
+
+/*for 5+-2 test case and +/- button*/
+function makeCurrentValueNegative() {
+ var currentValue = document.getElementById("result").innerHTML
+  if(currentValue[0] === "-") {
+   currentValue = currentValue.slice(1)
+   $("#currentValue").html(currentValue)
+  } else {
+   $("#currentValue").prepend("-")
+  }
+  return currentValue
 }
 
 function clr() {
