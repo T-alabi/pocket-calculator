@@ -10,14 +10,14 @@ function dis(val)  {
 
 function dot(val) {
 //placeholder keeps the zero after the decimal point DEAL WIT IT LATER
-document.getElementById("result").innerHTML;
+document.getElementById("result").value+=val
 
 }
 
 function clr() {
     document.getElementById("result").value =" "
   }
-
+/*test case: 100/25% INCORRECT*/
 function per(val) {
   let x = document.getElementById("result").value
   let y = eval(x)/100;
