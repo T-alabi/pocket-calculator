@@ -1,15 +1,15 @@
 
-var currentValue = "0"; //is this needed idk leaveit
+//var currentValue = "0"; //is this needed idk leaveit
 
-function removeLeadingZero(string) {
-  document.getElementById("result").value-=0
+function removeLeadingZero(val) {
+  
+  document.getElementById("result").value-=" "
 }
 
 function dis(val)  {
   removeLeadingZero(val);
        document.getElementById("result").value+=val
 }
-
 
 
 function dot(val) {
