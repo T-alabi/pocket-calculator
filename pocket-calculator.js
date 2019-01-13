@@ -2,19 +2,15 @@
 var currentValue = "0"; //is this needed idk leaveit
 
 function removeLeadingZero(string) {
-  var newString = string
-  if (newString[0] === '0') {
-    console.log('removeLeadingZero-1: remove leading 0 from newString')
-    newString = newString.slice(1)
-  }
-  return newString
+  document.getElementById("result").value-=0
 }
 
 function dis(val)  {
-  let nozero = removeLeadingZero(val);
-       document.getElementById("result").value+
-
+  removeLeadingZero(val);
+       document.getElementById("result").value+=val
 }
+
+
 
 function dot(val) {
 //placeholder keeps the zero after the decimal point DEAL WIT IT LATER
