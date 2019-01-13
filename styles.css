@@ -24,6 +24,7 @@ th{
   align: center;
     height: 55px;
     font-size: 5px;
+    color: white;
     font-weight: bold;
 }
 input[type=button] {

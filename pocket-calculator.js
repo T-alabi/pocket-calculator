@@ -1,11 +1,19 @@
-function dot(val){
-//placeholder keeps the zero after the decimal point
-//do later (decimal point)
-document.getElementById("result").value+=val+0;
 
+var currentValue = "0"; //is this needed idk leaveit
+
+function removeLeadingZero(string) {
+  var newString = string
+  if (newString[0] === '0') {
+    console.log('removeLeadingZero-1: remove leading 0 from newString')
+    newString = newString.slice(1)
+  }
+  return newString
 }
+
 function dis(val)  {
-       document.getElementById("result").value+=val
+  let nozero = removeLeadingZero(val);
+       document.getElementById("result").value+
+
 }
 
 function dot(val) {
@@ -26,7 +34,8 @@ function makeCurrentValueNegative() {
 }
 
 function clr() {
-    document.getElementById("result").value =" "
+  var currentValue="0"
+    document.getElementById("result").value = currentValue
   }
 /*test case: 100/25% INCORRECT*/
 function per(val) {
@@ -66,6 +75,7 @@ if(isFinite(y)===false ){
   document.getElementById("result").value = "Error"
 }
 }
+
 /*FAILED TEST CASES
 Enter 5 + - 3, and your calculator should display 2.
 Enter 8 + x 2, and your calculator should display 16.
