@@ -1,9 +1,9 @@
 
-//var currentValue = "0"; //is this needed idk leaveit
+var currentValue = "0"; //is this needed idk leaveit
 
 function removeLeadingZero(val) {
-  
-  document.getElementById("result").value-=" "
+
+  document.getElementById("result").value-="0"
 }
 
 function dis(val)  {
@@ -30,7 +30,7 @@ function makeCurrentValueNegative() {
 }
 
 function clr() {
-  var currentValue="0"
+  var currentValue= 0;
     document.getElementById("result").value = currentValue
   }
 /*test case: 100/25% INCORRECT*/
