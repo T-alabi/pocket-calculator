@@ -1,14 +1,12 @@
 
-//var currentValue = "0"; //is this needed idk leaveit
 
 function removeLeadingZero(val) {
-  
-  document.getElementById("result").value-=" "
+  document.getElementById("result").value-="0"
 }
 
 function dis(val)  {
-  removeLeadingZero(val);
        document.getElementById("result").value+=val
+       removeLeadingZero(val);
 }
 
 
@@ -44,10 +42,6 @@ function solve() {
   let x = document.getElementById("result").value
   let y = eval(x);
  document.getElementById("result").value = y
-/*error message*/
- if (isNaN(y) ) {
-  document.getElementById("result").value = "Error";
-}
 /*thousands place commas*/
 if (y > 999){
   document.getElementById("result").value = y.toLocaleString();
