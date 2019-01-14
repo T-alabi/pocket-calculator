@@ -36,7 +36,7 @@ function clr() {
 /*test case: 100/25% INCORRECT*/
 function per(val) {
   let x = document.getElementById("result").value
-  let y = eval(x)/100;
+  let y = x/100;
  document.getElementById("result").value = y
  if (isNaN(y) ) {
   document.getElementById("result").value = "Error";
