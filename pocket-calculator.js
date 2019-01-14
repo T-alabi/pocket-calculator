@@ -38,17 +38,7 @@ function per(val) {
   let x = document.getElementById("result").value
   let y = eval(x)/100;
  document.getElementById("result").value = y
- if (isNaN(y) ) {
-  document.getElementById("result").value = "Error";
-}
-/*thousands place commas*/
-if (y > 999){
-  document.getElementById("result").value = y.toLocaleString();
-}
-/*scientific notation */
-if (y > 999999999){
-    document.getElementById("result").value = y.toExponential();
-}
+
 }
 
 function solve() {
@@ -69,6 +59,17 @@ if (y > 999999999){
 }
 if(isFinite(y)===false ){
   document.getElementById("result").value = "Error"
+}
+ if (isNaN(y) ) {
+  document.getElementById("result").value = "Error";
+}
+/*thousands place commas*/
+if (y > 999){
+  document.getElementById("result").value = y.toLocaleString();
+}
+/*scientific notation */
+if (y > 999999999){
+    document.getElementById("result").value = y.toExponential();
 }
 }
 
