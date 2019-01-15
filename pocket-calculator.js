@@ -1,4 +1,3 @@
-//var currentValue = "0";
 /*function removeLeadingZero(val) {
   document.getElementById("result").value-=0;
 }*/
@@ -13,8 +12,6 @@ function dot(val) {
 document.getElementById("result").value+=val
 }
 
-
-
 function clr() {
 var currentValue = 0;
     document.getElementById("result").value = currentValue
@@ -26,7 +23,6 @@ function per(val) {
   let y = x/100;
  document.getElementById("result").value = y
 }
-/*for 5+-2 test case and +/- button*/
 
 function solve() {
   let x = document.getElementById("result").value
@@ -44,9 +40,11 @@ if (y > 999){
 if (y > 999999999){
     document.getElementById("result").value = y.toExponential();
 }
-if(isFinite(y)===false ){
-  document.getElementById("result").value = "Error"
+/*infinity error message*/
+if(isFinite(y)===false){
+  document.getElementById("result").value+= "Error"
 }
+/*NAN error message*/
 if (isNaN(y) ) {
  document.getElementById("result").value = "Error";
 }
@@ -59,19 +57,22 @@ if (y > 999999999){
    document.getElementById("result").value = y.toExponential();
 }
 }
+/*negative symbol (+/-) and negative*/
 function makeCurrentValueNegative(val) {
   let x = document.getElementById("result").value
-
   let negVal = x*-1
   document.getElementById("result").value = negVal
+}
+function makeValuePosotive(val){
+  let x = document.getElementById("result").value
+let posVal = Math.abs(x);
+document.getElementById("result").value = posVal
 
 }
 /*FAILED TEST CASES
-Enter 5 + - 3, and your calculator should display 2. DONE
 Enter 8 + x 2, and your calculator should display 16.
 Enter 8 + / 4, and your calculator should display 2.
 1.2.3.4, and your calculator should display 1.234.
 (doesnt evaluate for all 4)
 Enter 7 and then press AC, and your calculator should display 0(input screen blank) (works now but doesnt go away)
-Enter 9 and then +/-, and your calculator should display -9 DONEs
 */
