@@ -1,17 +1,12 @@
-
-var currentValue = 0; //is this needed idk leaveit
-
-function removeLeadingZero(val) {
-
-  document.getElementById("result").value-=currentValue;
-}
+var currentValue = "0";
+/*function removeLeadingZero(val) {
+  document.getElementById("result").value-=0;
+}*/
 
 function dis(val)  {
-       document.getElementById("result").value+=val
-     removeLeadingZero(val);
-
+//removeLeadingZero(val);
+         document.getElementById("result").value+=val
 }
-
 
 function dot(val) {
 //placeholder keeps the zero after the decimal point DEAL WIT IT LATER
@@ -37,7 +32,7 @@ function clr() {
 /*test case: 100/25% INCORRECT*/
 function per(val) {
   let x = document.getElementById("result").value
-  let y = eval(x)/100;
+  let y = x/100;
  document.getElementById("result").value = y
 }
 
