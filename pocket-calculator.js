@@ -1,14 +1,15 @@
 
-var currentValue = "0"; //is this needed idk leaveit
+var currentValue = 0; //is this needed idk leaveit
 
 function removeLeadingZero(val) {
 
-  document.getElementById("result").value-="0"
+  document.getElementById("result").value-=currentValue;
 }
 
 function dis(val)  {
-  removeLeadingZero(val);
        document.getElementById("result").value+=val
+     removeLeadingZero(val);
+
 }
 
 
@@ -30,25 +31,14 @@ function makeCurrentValueNegative() {
 }
 
 function clr() {
-  var currentValue= 0;
     document.getElementById("result").value = currentValue
   }
+
 /*test case: 100/25% INCORRECT*/
 function per(val) {
   let x = document.getElementById("result").value
   let y = eval(x)/100;
  document.getElementById("result").value = y
- if (isNaN(y) ) {
-  document.getElementById("result").value = "Error";
-}
-/*thousands place commas*/
-if (y > 999){
-  document.getElementById("result").value = y.toLocaleString();
-}
-/*scientific notation */
-if (y > 999999999){
-    document.getElementById("result").value = y.toExponential();
-}
 }
 
 function solve() {
@@ -69,6 +59,17 @@ if (y > 999999999){
 }
 if(isFinite(y)===false ){
   document.getElementById("result").value = "Error"
+}
+if (isNaN(y) ) {
+ document.getElementById("result").value = "Error";
+}
+/*thousands place commas*/
+if (y > 999){
+ document.getElementById("result").value = y.toLocaleString();
+}
+/*scientific notation */
+if (y > 999999999){
+   document.getElementById("result").value = y.toExponential();
 }
 }
 
