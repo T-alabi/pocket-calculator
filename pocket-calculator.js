@@ -1,10 +1,18 @@
 function removeLeadingZero(val) {
-  document.getElementById("result").innerHTML = ` `
+  let notRan;
+  notRan = true;
+if( notRan===true){
+  document.getElementById("result").value+=""
+}
+
+
 }
 
 function dis(val)  {
 removeLeadingZero(val);
-         document.getElementById("result").value+=val
+
+   document.getElementById("result").value+=val
+  console.log(val);
 }
 
 function dot(val) {
