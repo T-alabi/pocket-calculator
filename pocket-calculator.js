@@ -1,14 +1,15 @@
 function removeLeadingZero(val) {
-  let notRan;
+/*  let notRan;
   notRan = true;
 if( notRan===true){
   document.getElementById("result").value+=""
-}
-
+}*/
+//value-=0 gives the NAN(val) so don't
 
 }
 
 function dis(val)  {
+
 removeLeadingZero(val);
 
    document.getElementById("result").value+=val
@@ -81,5 +82,5 @@ Enter 8 + x 2, and your calculator should display 16.
 Enter 8 + / 4, and your calculator should display 2.
 1.2.3.4, and your calculator should display 1.234.
 (doesnt evaluate for all 4)
-Enter 7 and then press AC, and your calculator should display 0(input screen blank) (works now but doesnt go away)
+Enter 7 and then press AC, and your calculator should display 0 (works now but doesnt go away)
 */
