@@ -1,15 +1,17 @@
-/*function removeLeadingZero(val) {
-  document.getElementById("result").value-=0;
-}*/
+function removeLeadingZero(val) {
+  document.getElementById("result").innerHTML = ` `
+}
 
 function dis(val)  {
-//removeLeadingZero(val);
+removeLeadingZero(val);
          document.getElementById("result").value+=val
 }
 
 function dot(val) {
 //placeholder keeps the zero after the decimal point DEAL WIT IT LATER
+let decimalCount
 document.getElementById("result").value+=val
+decimalCount = decimalCount++;
 }
 
 function clr() {
@@ -52,10 +54,11 @@ if (isNaN(y) ) {
 if (y > 999){
  document.getElementById("result").value = y.toLocaleString();
 }
-/*scientific notation */
-if (y > 999999999){
-   document.getElementById("result").value = y.toExponential();
-}
+
+/*if (decimalCount > 1){
+
+document.getElementById("result").value
+}*/
 }
 /*negative symbol (+/-) and negative*/
 function makeCurrentValueNegative(val) {
@@ -63,12 +66,8 @@ function makeCurrentValueNegative(val) {
   let negVal = x*-1
   document.getElementById("result").value = negVal
 }
-function makeValuePosotive(val){
-  let x = document.getElementById("result").value
-let posVal = Math.abs(x);
-document.getElementById("result").value = posVal
 
-}
+
 /*FAILED TEST CASES
 Enter 8 + x 2, and your calculator should display 16.
 Enter 8 + / 4, and your calculator should display 2.
