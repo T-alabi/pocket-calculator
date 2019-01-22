@@ -10,25 +10,37 @@ if( notRan===true){
 
 function dis(val)  {
 
-removeLeadingZero(val);
-
+//removeLeadingZero(val);
    document.getElementById("result").value+=val
-  console.log(val);
+   console.log(val);
+   /*idek*/
+  let num = document.getElementById("result").value
+  if (num >= 999){
+    document.getElementById("result").value.toLocaleString();
+  }
+
 }
 
 function dot(val) {
 //placeholder keeps the zero after the decimal point DEAL WIT IT LATER
-let decimalCount
 document.getElementById("result").value+=val
-decimalCount = decimalCount++;
+
+let decimalCount = 0;
+decimalCount = decimalCount+ 1;
+console.log("there are", decimalCount)
+/*works but you can oly use the decimal in one number*/
+if (decimalCount >= 1){
+  var button = document.getElementById("decimal")
+button.disabled = true;
+}
 }
 
 function clr() {
 var currentValue = 0;
     document.getElementById("result").value = currentValue
+    decimalCount = 0;
   }
 
-/*test case: 100/25% INCORRECT*/
 function per(val) {
   let x = document.getElementById("result").value
   let y = x/100;
@@ -64,10 +76,6 @@ if (y > 999){
  document.getElementById("result").value = y.toLocaleString();
 }
 
-/*if (decimalCount > 1){
-
-document.getElementById("result").value
-}*/
 }
 /*negative symbol (+/-) and negative*/
 function makeCurrentValueNegative(val) {
