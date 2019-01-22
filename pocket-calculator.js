@@ -48,13 +48,14 @@ if (y > 999){
   document.getElementById("result").value = y.toLocaleString();
 }
 /*scientific notation */
-if (y > 999999999){
+if (y > 999999999 || y < 0.000000001){
     document.getElementById("result").value = y.toExponential();
 }
 /*infinity error message*/
-if(isFinite(y)===false){
-  document.getElementById("result").value+= "Error"
+if (isFinite(y)===false){
+  document.getElementById("result").value+= "Error";
 }
+
 /*NAN error message*/
 if (isNaN(y) ) {
  document.getElementById("result").value = "Error";
