@@ -1,5 +1,5 @@
 let decimalCount = 0;
-
+let arr = [];
 function removeLeadingZero(val) {
 /*  let notRan;
   notRan = true;
@@ -16,9 +16,17 @@ function makeCurrentValueNegative(val) {
 }
 
 function dis(val)  {
-//removeLeadingZero(val);
-   document.getElementById("result").value+=val
-   console.log(val);
+  if (arr[0] === 0) {
+    arr.shift();
+    arr.push(val);
+    document.getElementById("result").value = val;
+  }
+  else {
+    arr.push(val);
+    document.getElementById("result").value += val;
+  }
+  console.log(val);
+
 }
 
 function dot(val) {
@@ -35,9 +43,10 @@ button.disabled = true;
 }
 
 function clr() {
-var currentValue = 0;
-    document.getElementById("result").value = currentValue
+    arr = [0];
+    document.getElementById("result").value = "0"
     decimalCount = 0;
+
   }
 
 function per(val) {
