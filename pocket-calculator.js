@@ -1,13 +1,8 @@
 let decimalCount = 0;
 let arr = [];
-function removeLeadingZero(val) {
-/*  let notRan;
-  notRan = true;
-if( notRan===true){
-  document.getElementById("result").value+=""
-}*/
-//value-=0 gives the NAN(val) so don't
-}
+let decimalArray = [];
+
+
 /*negative symbol (+/-) and negative*/
 function makeCurrentValueNegative(val) {
   let x = document.getElementById("result").value
@@ -32,21 +27,23 @@ function dis(val)  {
 function dot(val) {
 //placeholder keeps the zero after the decimal point DEAL WIT IT LATER
 
-document.getElementById("result").value+=val
-decimalCount = decimalCount+1;
-console.log("Count is:", decimalCount)
-/*works but you can oly use 2 decimals*/
-if (decimalCount >= 2){
-  var button = document.getElementById("decimal")
-button.disabled = true;
+decimalStat = false;
+
+let findDecimal= decimalArray.indexOf(".");
+ // alert(findNegative);
+ if(decimalStat == false){
+ document.getElementById("result").value += val
+decimalArray.push(val)
+document.getElementById("decimal").disabled = true;
 }
+
 }
 
 function clr() {
     arr = [0];
     document.getElementById("result").value = "0"
-    decimalCount = 0;
-
+    decimalStatInsert = false;
+    document.getElementById("decimal").disabled = false;
   }
 
 function per(val) {
@@ -88,6 +85,4 @@ Enter 8 + / 4, and your calculator should display 2.
 have opperators seperately
 
 1.2.3.4, and your calculator should display 1.234.(Kinda solved)
-(doesnt evaluate for all 4)
-Enter 7 and then press AC, and your calculator should display 0 (works now but doesnt go away)
 */
