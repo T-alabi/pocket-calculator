@@ -1,7 +1,7 @@
 let decimalCount = 0;
 let arr = [];
 let decimalArray = [];
-
+let aRay = [];
 
 /*negative symbol (+/-) and negative*/
 function makeCurrentValueNegative(val) {
@@ -53,6 +53,8 @@ function per(val) {
 }
 
 function solve() {
+  // operators
+
   let x = document.getElementById("result").value
   let y = eval(x);
  document.getElementById("result").value = y
@@ -70,12 +72,16 @@ if (y > 999999999 ){
 if (isFinite(y)==false){
   document.getElementById("result").value= "Error"
 }
-
 /*NAN error message*/
 if (isNaN(y) ) {
  document.getElementById("result").value = "Error";
 }
-
+for (let j = 0; j < aRay.length - 1; j++) {
+  if ((aRay[j] == "+" || aRay[j] == "-" || aRay[j] == "*" || aRay[j] == "/") && (aRay[j + 1] == "+" || aRay[j + 1] == "-" || aRay[j + 1] == "*" || aRay[j + 1] == "/")) {
+    arr.splice(j, 1);
+    j--;
+  }
+}
 }
 
 
@@ -83,6 +89,4 @@ if (isNaN(y) ) {
 Enter 8 + x 2, and your calculator should display 16.
 Enter 8 + / 4, and your calculator should display 2.
 have opperators seperately
-
-1.2.3.4, and your calculator should display 1.234.(Kinda solved)
 */
